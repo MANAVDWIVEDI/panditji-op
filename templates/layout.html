@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PANDIT JI OP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" class="logo">
+                <span class="brand-name">PANDIT JI OP</span>
+            </div>
+            <div class="nav-right">
+                <a href="/login" class="btn">Login</a>
+                <a href="/signup" class="btn btn-primary">Signup</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+
+
