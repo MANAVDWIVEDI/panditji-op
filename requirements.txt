@@ -7,6 +7,7 @@ colorama==0.4.6
 docutils==0.21.2
 filetype==1.2.0
 Flask==3.1.1
+gunicorn==23.0.0
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
@@ -17,6 +18,7 @@ kivy_deps.angle==0.4.0
 kivy_deps.glew==0.3.1
 kivy_deps.sdl2==0.8.0
 MarkupSafe==3.0.2
+packaging==25.0
 pillow==10.4.0
 pygame==2.6.1
 Pygments==2.19.1
