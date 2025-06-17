@@ -1,21 +1,27 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 
 app = Flask(__name__)
 
-# Home page
+# Home route
 @app.route('/')
-def home():
-    return render_template('index.html')
+def index():
+    return render_template("index.html")
 
-# Login page
-@app.route('/login')
+# Login route
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    if request.method == 'POST':
+        # Handle login logic
+        return redirect(url_for('index'))
+    return render_template("login.html")
 
-# Signup page
-@app.route('/signup')
+# Signup route
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html')
+    if request.method == 'POST':
+        # Handle signup logic
+        return redirect(url_for('login'))
+    return render_template("signup.html")
 
 # Run the app
 if __name__ == '__main__':
